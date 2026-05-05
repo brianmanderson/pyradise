@@ -1,0 +1,18 @@
+# RTMaskConformanceTest threshold overrides for PyRaDiSe.
+#
+# Defaults (Dice >= 0.95, sDSC1 >= 0.95, HD95 <= 2 mm, MSD <= 0.5 mm,
+# vol_err <= 3%) ship inside the rtmask-conformance package; per-primitive
+# overrides shallow-merge over those.
+#
+# This file is intentionally empty for v0.1 -- populate from the first CI
+# run if any ROI lands just under the published defaults. Each relaxation
+# should be documented: what PyRaDiSe currently produces, why, and the
+# path back to the published default. If a future PyRaDiSe change lifts
+# the actual metric, the corresponding line here should be removed (or
+# its number tightened) so the conformance gate gets stricter.
+
+schema_version: 1
+
+# primitives:
+#   <roi_name>:
+#     <metric>: <value>   # with comment explaining why
